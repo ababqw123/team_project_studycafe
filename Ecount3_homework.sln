@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220310_Homework(Abstract)",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220316_DesignPattern_TemplateMethod", "220316_DesignPattern_TemplateMethod\220316_DesignPattern_TemplateMethod.csproj", "{76E9273B-7708-43C7-A04D-78E41985DAB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220316_DesignPattern_AbstractMethod", "220316_DesignPattern_AbstractMethod\220316_DesignPattern_AbstractMethod.csproj", "{5A193014-1577-4558-B548-1AE2D6F7F7D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{76E9273B-7708-43C7-A04D-78E41985DAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76E9273B-7708-43C7-A04D-78E41985DAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76E9273B-7708-43C7-A04D-78E41985DAB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A193014-1577-4558-B548-1AE2D6F7F7D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A193014-1577-4558-B548-1AE2D6F7F7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A193014-1577-4558-B548-1AE2D6F7F7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A193014-1577-4558-B548-1AE2D6F7F7D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

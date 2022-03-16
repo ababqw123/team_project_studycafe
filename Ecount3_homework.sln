@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220304_ArrayCinema", "22030
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220310_Homework(Abstract)", "220310_Homework(Abstract)\220310_Homework(Abstract).csproj", "{D492353B-650A-4054-AF13-D4829AECFCFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220316_DesignPattern_TemplateMethod", "220316_DesignPattern_TemplateMethod\220316_DesignPattern_TemplateMethod.csproj", "{76E9273B-7708-43C7-A04D-78E41985DAB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D492353B-650A-4054-AF13-D4829AECFCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D492353B-650A-4054-AF13-D4829AECFCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D492353B-650A-4054-AF13-D4829AECFCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E9273B-7708-43C7-A04D-78E41985DAB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E9273B-7708-43C7-A04D-78E41985DAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E9273B-7708-43C7-A04D-78E41985DAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E9273B-7708-43C7-A04D-78E41985DAB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

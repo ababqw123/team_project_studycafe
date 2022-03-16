@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220302_homework(array)", "2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220304_ArrayCinema", "220304_ArrayCinema\220304_ArrayCinema.csproj", "{CA475F00-7CDC-429F-B8C5-7510BFCFF09B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220310_Homework(Abstract)", "220310_Homework(Abstract)\220310_Homework(Abstract).csproj", "{D492353B-650A-4054-AF13-D4829AECFCFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "220309_RegexHomework", "220309_RegexHomework\220309_RegexHomework.csproj", "{FBD1556D-4496-4905-BFE1-53508209F731}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{CA475F00-7CDC-429F-B8C5-7510BFCFF09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA475F00-7CDC-429F-B8C5-7510BFCFF09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA475F00-7CDC-429F-B8C5-7510BFCFF09B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D492353B-650A-4054-AF13-D4829AECFCFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D492353B-650A-4054-AF13-D4829AECFCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D492353B-650A-4054-AF13-D4829AECFCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D492353B-650A-4054-AF13-D4829AECFCFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD1556D-4496-4905-BFE1-53508209F731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD1556D-4496-4905-BFE1-53508209F731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD1556D-4496-4905-BFE1-53508209F731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD1556D-4496-4905-BFE1-53508209F731}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,10 +8,16 @@ namespace StudyCafeManager
 {
     class Room : ISeat
     {
+        private string status;
         private string seatnum;
         public string SeatNum
         {
             get { return seatnum; }
+        }
+        public string Status
+        {
+            get { return Status; }
+            set { status = value; }
         }
         public Room(string seatnum)
         {

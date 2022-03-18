@@ -9,5 +9,7 @@ namespace StudyCafeManager
     interface ISeat
     {
         string SeatNum { get; }
+        string Status { get; set; }
+
     }
 }

@@ -21,6 +21,10 @@ namespace StudyCafeManager
         public StudyCafe()
         {
             admin = new Admin();
+            users = new Dictionary<string, User>();
+            bookStatus = new Dictionary<ISeat, User>();
+            seat = new List<ISeat>();
+            Load();
         }
 
         #region<Menu part>
@@ -189,14 +193,20 @@ namespace StudyCafeManager
                     if (item.Email == email && item.PW == pw)
                     {
                         person = item;
+                        return person;
                     }
                 }
+                Console.WriteLine("아아디, 비밀번호를 잘못 입력했습니다.");
             }
             else
             {
                 if (pw == admin.PW)
                 {
                     person = admin;
+                }
+                else
+                {
+                    Console.WriteLine("아아디, 비밀번호를 잘못 입력했습니다.");
                 }
             }
             return person;

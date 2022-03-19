@@ -14,5 +14,10 @@ namespace StudyCafeManager
             this.email = email;
             this.pw = pw;
         }
+
+        public override string ToString()
+        {
+            return $"회원 이름 : {name}, 회원 이메일 : {email}"; 
+        }
     }
 }

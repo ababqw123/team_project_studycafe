@@ -140,7 +140,9 @@ namespace StudyCafeManager
                 name = Console.ReadLine();
                 Console.Write($"이메일 : ");
                 email = Console.ReadLine();
-                Check_email(email);
+
+                if (Check_email(email)) start = false;
+                
             }
             Console.Write($"password : ");
             string pw = Console.ReadLine();
@@ -157,9 +159,9 @@ namespace StudyCafeManager
             if (check != true)
             {
                 Console.WriteLine("이메일을 잘못 입력하셨습니다. 다시 입력해주세요");
-                return true;
+                return false;
             }
-            else return false;
+            else return true;
 
         }
         public void DelUser()
@@ -283,6 +285,19 @@ namespace StudyCafeManager
         {
             return null;
         }
+
+        private void Load_Create()
+        {
+            string user_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_user.txt";
+            string admin_path = $@"C:\StudyCafeTest\admin.txt";
+            string bookstatus_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
+            string seat_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_seat.txt";
+
+
+        }
+
+
+
         private void Load()
         {
             string user_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_user.txt";
@@ -294,91 +309,67 @@ namespace StudyCafeManager
 
             if (!File.Exists(user_path))
             {
-                using (Stream user_maker = new FileStream(user_path, FileMode.Create))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-
-                }
+                
             }
 
             else
             {
-                using (Stream user_open = new FileStream(user_path, FileMode.Open))
+                using (Stream user_open = new FileStream(user_path, FileMode.OpenOrCreate))
                 {
                     BinaryFormatter user_bf = new BinaryFormatter();
 
                     users = (Dictionary<string, Person>)user_bf.Deserialize(user_open);
+                    
                 }
             }
 
-
-            //admin 로드
-
-            if (!File.Exists(admin_path))
-            {
-                using (Stream admin_maker = new FileStream(admin_path, FileMode.Create))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-
-                }
-            }
-
-            else
-            {
-                using (Stream admin_open = new FileStream(admin_path, FileMode.Open))
-                {
-                    BinaryFormatter admin_bf = new BinaryFormatter();
-
-                    admin = (Admin)admin_bf.Deserialize(admin_open);
-                }
-            }
-
-            //book_status 로드
-
-            if (!File.Exists(bookstatus_path))
-            {
-                using (Stream bookstatus_maker = new FileStream(bookstatus_path, FileMode.Create))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-
-                }
-            }
-
-            else
-            {
-                using (Stream bookstatus_open = new FileStream(bookstatus_path, FileMode.Open))
-                {
-                    BinaryFormatter bookstatus_bf = new BinaryFormatter();
-
-                    bookStatus = (Dictionary<ISeat, Person>)bookstatus_bf.Deserialize(bookstatus_open);
-                }
-            }
-
-            //seat 로드
-            if (!File.Exists(bookstatus_path))
-            {
-                using (Stream seat_maker = new FileStream(seat_path, FileMode.Create))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-
-                }
-            }
-
-            else
-            {
-                using (Stream seat_open = new FileStream(seat_path, FileMode.Open))
-                {
-                    BinaryFormatter seat_bf = new BinaryFormatter();
-
-                    bookStatus = (Dictionary<ISeat, Person>)seat_bf.Deserialize(seat_open);
-                }
-            }
+            //
+            ////book_status 로드
+            //
+            //if (!File.Exists(bookstatus_path))
+            //{
+            //    using (Stream bookstatus_maker = new FileStream(bookstatus_path, FileMode.Create))
+            //    {
+            //        BinaryFormatter formatter = new BinaryFormatter();
+            //
+            //    }
+            //}
+            //
+            //else
+            //{
+            //    using (Stream bookstatus_open = new FileStream(bookstatus_path, FileMode.Open))
+            //    {
+            //        BinaryFormatter bookstatus_bf = new BinaryFormatter();
+            //
+            //        bookStatus = (Dictionary<ISeat, Person>)bookstatus_bf.Deserialize(bookstatus_open);
+            //    }
+            //}
+            //
+            ////seat 로드
+            //if (!File.Exists(bookstatus_path))
+            //{
+            //    using (Stream seat_maker = new FileStream(seat_path, FileMode.Create))
+            //    {
+            //        BinaryFormatter formatter = new BinaryFormatter();
+            //
+            //    }
+            //}
+            //
+            //else
+            //{
+            //    using (Stream seat_open = new FileStream(seat_path, FileMode.Open))
+            //    {
+            //        BinaryFormatter seat_bf = new BinaryFormatter();
+            //
+            //        bookStatus = (Dictionary<ISeat, Person>)seat_bf.Deserialize(seat_open);
+            //    }
+            //}
         }
         private void Save_user()
         {
             string user_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_user.txt";
 
-            using (Stream user_save = new FileStream(user_path, FileMode.Open))
+            using (Stream user_save = new FileStream(user_path, FileMode.OpenOrCreate))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
 
@@ -391,7 +382,7 @@ namespace StudyCafeManager
         {
             string bookstatus_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
 
-            using (Stream bookstatus_save = new FileStream(bookstatus_path, FileMode.Open))
+            using (Stream bookstatus_save = new FileStream(bookstatus_path, FileMode.OpenOrCreate))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
 
@@ -404,7 +395,7 @@ namespace StudyCafeManager
         {
             string seat_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
 
-            using (Stream seat_save = new FileStream(seat_path, FileMode.Open))
+            using (Stream seat_save = new FileStream(seat_path, FileMode.OpenOrCreate))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
 

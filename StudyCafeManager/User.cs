@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace StudyCafeManager
 {
+    [Serializable]
     class User : Person
     {
         public User(string name, string email, string pw)

@@ -50,7 +50,7 @@ namespace StudyCafeManager
                 switch (select)
                 {
                     case "1":
-                        login();
+                        MainMenu(login());
                         break;
                     case "2":
                         AddUser();
@@ -68,6 +68,7 @@ namespace StudyCafeManager
 
         public void MainMenu(Person person)
         {
+            Console.Clear();
             string loginType = Convert.ToString(person.GetType());
             if (loginType == "Admin")
             {
@@ -99,28 +100,34 @@ namespace StudyCafeManager
             }
             else
             {
-                Console.WriteLine("******************************************************");
-                Console.WriteLine("*                Ecount Study Lounge                 *");
-                Console.WriteLine("******************************************************");
-                Console.WriteLine("*1. 회원조회  2. 예약현황  3. 예약금지 관리  4. 돌아가기    *");
-                Console.WriteLine("******************************************************");
+                Console.WriteLine("*************************************************************************");
+                Console.WriteLine("*                         Ecount Study Lounge                           *");
+                Console.WriteLine("*************************************************************************");
+                Console.WriteLine("*1. 예약하기   2. 예약변경  3. 예약취소  4. 예약조회  5. 회원탈퇴  6. 돌아가기   *");
+                Console.WriteLine("*************************************************************************");
                 Console.Write("원하시는 메뉴를 선택해주세요. : ");
                 select = Console.ReadLine();
                 switch (select)
                 {
                     case "1":
-                        CheckAllUser();
+                        Book();
                         break;
                     case "2":
-                        CheckAllBook();
+                        Change();
                         break;
                     case "3":
-                        Block();
+                        CancleBook();
                         break;
                     case "4":
+                        CheckBook();
+                        break;
+                    case "5":
+                        DelUser();
+                        break;
+                    case "6":
                         break;
                     default:
-                        Console.WriteLine("1,2,3만 입력해주세요. 엔터를 누르면 돌아갑니다.");
+                        Console.WriteLine("1,2,3,4,5만 입력해주세요. 엔터를 누르면 돌아갑니다.");
                         Console.ReadLine();
                         break;
                 }
@@ -173,6 +180,18 @@ namespace StudyCafeManager
             users.Remove(email);
             Save_user();
         }
+        public void CheckBook()
+        {
+            Console.Clear();
+            //회원정보 이름,이메일을 key값으로 딕셔너리 bookStatus에 있으면 띄어주고 없으면 없다고
+
+            foreach (var key in bookStatus)
+            {
+                Console.WriteLine(key.ToString());
+            }
+
+
+        }
         public void Book()
         {
             // 민성
@@ -219,6 +238,10 @@ namespace StudyCafeManager
             }
         }
         public void Change()
+        {
+
+        }
+        public void CancleBook()
         {
 
         }

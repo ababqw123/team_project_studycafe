@@ -11,8 +11,8 @@ namespace StudyCafeManager
         public Admin()
         {
             this.name = "admin";
-            this.email = "";
-            this.pw = "";
+            this.email = "admin";
+            this.pw = "0000";
         }
     }
 }

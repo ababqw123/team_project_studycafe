@@ -285,10 +285,10 @@ namespace StudyCafeManager
         }
         private void Load()
         {
-            string user_path = $@"C:\Users\r2com\Desktop\homework\" + $"{DateTime.Now.ToString("yy.MM.dd")}_user.txt";
-            string admin_path = $@"C:\Users\r2com\Desktop\homework\admin.txt";
-            string bookstatus_path = $@"C:\Users\r2com\Desktop\homework\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
-            string seat_path = $@"C:\Users\r2com\Desktop\homework\" + $"{DateTime.Now.ToString("yy.MM.dd")}_seat.txt";
+            string user_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_user.txt";
+            string admin_path = $@"C:\StudyCafeTest\admin.txt";
+            string bookstatus_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
+            string seat_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_seat.txt";
 
             // user 로드
 
@@ -376,7 +376,7 @@ namespace StudyCafeManager
         }
         private void Save_user()
         {
-            string user_path = $@"C:\Users\r2com\Desktop\homework\" + $"{DateTime.Now.ToString("yy.MM.dd")}_user.txt";
+            string user_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_user.txt";
 
             using (Stream user_save = new FileStream(user_path, FileMode.Open))
             {
@@ -389,7 +389,7 @@ namespace StudyCafeManager
 
         private void Save_bookstatus()
         {
-            string bookstatus_path = $@"C:\Users\r2com\Desktop\homework\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
+            string bookstatus_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
 
             using (Stream bookstatus_save = new FileStream(bookstatus_path, FileMode.Open))
             {
@@ -402,7 +402,7 @@ namespace StudyCafeManager
 
         private void Save_seat()
         {
-            string seat_path = $@"C:\Users\r2com\Desktop\homework\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
+            string seat_path = $@"C:\StudyCafeTest\" + $"{DateTime.Now.ToString("yy.MM.dd")}_bookstatus.txt";
 
             using (Stream seat_save = new FileStream(seat_path, FileMode.Open))
             {

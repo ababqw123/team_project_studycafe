@@ -10,6 +10,8 @@ namespace StudyCafeManager
     {
         static void Main(string[] args)
         {
+            StudyCafe start = new StudyCafe();
+            start.Menu();
         }
     }
 }

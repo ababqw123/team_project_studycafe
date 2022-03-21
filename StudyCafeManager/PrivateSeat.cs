@@ -18,7 +18,7 @@ namespace StudyCafeManager
         }
         public string Status
         {
-            get { return Status; }
+            get { return status; }
             set { status = value; }
         }
         public PrivateSeat(string seatnum)
